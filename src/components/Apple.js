@@ -7,7 +7,7 @@ class Apple extends React.Component {
         color: "red",
         size: "medium",
         };
-    }
+    } 
     
     changeColor = () => {
         this.setState({ color: "green" });
