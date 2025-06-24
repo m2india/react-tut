@@ -52,13 +52,17 @@ class Apple extends React.Component {
             <h1>Apple</h1>
             <p>Color: {this.state.color}</p>
             <p>Size: {this.state.size}</p>
-            <h2>Apple Info: color is {color}, and the {size}</h2>
+
+            { sendToApple.color !== undefined && sendToApple.size !== undefined ? 
+                <h2>Apple Info: color is {color}, and the {size}</h2> : ''
+            }
+            
             {/* <h2>My function :{this.state.mytest.name}</h2> */}
              {this.state.showMyTest && ( <h2>My function :{this.state.mytest.name}</h2>)}
             <button onClick={this.changeColor}>Change Color</button>
             <button onClick={this.changeSize}>Change Size</button>
             <button onClick={this.toggleMyTestFunction}>
-                    {this.state.showMyTest ? "My Test" : "My Test"}
+                    {this.state.showMyTest ? "Hide" : "Show"}
                 </button>
         </div>
         );
