@@ -44,11 +44,15 @@ class Apple extends React.Component {
     };
     
     render() {
+
+          const { sendToApple } = this.props;
+          const { color, size } = sendToApple;
         return (
         <div>
             <h1>Apple</h1>
             <p>Color: {this.state.color}</p>
             <p>Size: {this.state.size}</p>
+            <h2>Apple Info: color is {color}, and the {size}</h2>
             {/* <h2>My function :{this.state.mytest.name}</h2> */}
              {this.state.showMyTest && ( <h2>My function :{this.state.mytest.name}</h2>)}
             <button onClick={this.changeColor}>Change Color</button>
